@@ -10,25 +10,50 @@ import XCTest
 @testable import CaloriesPerKilometer
 
 class CaloriesPerKilometerTests: XCTestCase {
+    let activitesJSON =
+    """
+    [
+        {
+            "id": 1,
+            "distance": 5000,
+            "kilojoules": 250,
+            "total_elevation_gain": 50,
+        },
+        {
+            "id": 2,
+            "distance": 10000,
+            "kilojoules": 500,
+            "total_elevation_gain": 100,
+        },
+        {
+            "id": 3,
+            "distance": 20000,
+            "kilojoules": 1000,
+            "total_elevation_gain": 200,
+        },
+    ]
+    """
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testCalucaltionOfCaloiresPerKilometer() {
+        let data = activitesJSON.data(using: .utf8)!
+        let activities = try! JSONDecoder().decode([Activity].self, from: data)
+
+        // when
+        let result = activities.calculate(resultType: .caloriesPerKilometer)
+
+        // then
+        XCTAssertEqual(result, "11.950")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testCalucaltionOfCaloiresPerElevatedMeters() {
+        let data = activitesJSON.data(using: .utf8)!
+        let activities = try! JSONDecoder().decode([Activity].self, from: data)
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        // when
+        let result = activities.calculate(resultType: .caloriesPerGainedElevatedMeter)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        // then
+        XCTAssertEqual(result, "1.195")
     }
 
 }

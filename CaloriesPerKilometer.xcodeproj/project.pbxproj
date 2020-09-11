@@ -14,6 +14,15 @@
 		3739371E250A221400129B18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3739371D250A221400129B18 /* Preview Assets.xcassets */; };
 		37393721250A221400129B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3739371F250A221400129B18 /* LaunchScreen.storyboard */; };
 		3739372C250A221400129B18 /* CaloriesPerKilometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739372B250A221400129B18 /* CaloriesPerKilometerTests.swift */; };
+		37393737250A245600129B18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393736250A245600129B18 /* Network.swift */; };
+		37393739250A271000129B18 /* strava_activites.json in Resources */ = {isa = PBXBuildFile; fileRef = 37393738250A271000129B18 /* strava_activites.json */; };
+		3739373C250A278B00129B18 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373B250A278B00129B18 /* Activity.swift */; };
+		3739373E250A54B700129B18 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373D250A54B700129B18 /* Stats.swift */; };
+		37393740250A72A800129B18 /* StravaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373F250A72A800129B18 /* StravaAuth.swift */; };
+		37393743250A72F800129B18 /* StravaAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393742250A72F800129B18 /* StravaAuthVC.swift */; };
+		37393745250AA31800129B18 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393744250AA31800129B18 /* AuthResponse.swift */; };
+		37393748250B730000129B18 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393747250B730000129B18 /* Store.swift */; };
+		3739374A250BAE4700129B18 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 37393749250BAE4700129B18 /* credentials.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		37393727250A221400129B18 /* CaloriesPerKilometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaloriesPerKilometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3739372B250A221400129B18 /* CaloriesPerKilometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesPerKilometerTests.swift; sourceTree = "<group>"; };
 		3739372D250A221400129B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37393736250A245600129B18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		37393738250A271000129B18 /* strava_activites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strava_activites.json; sourceTree = "<group>"; };
+		3739373B250A278B00129B18 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		3739373D250A54B700129B18 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		3739373F250A72A800129B18 /* StravaAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuth.swift; sourceTree = "<group>"; };
+		37393742250A72F800129B18 /* StravaAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuthVC.swift; sourceTree = "<group>"; };
+		37393744250AA31800129B18 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		37393747250B730000129B18 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		37393749250BAE4700129B18 /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,9 @@
 		37393713250A221100129B18 /* CaloriesPerKilometer */ = {
 			isa = PBXGroup;
 			children = (
+				37393746250B72F200129B18 /* Common */,
+				3739373A250A277600129B18 /* Models */,
+				37393741250A72B000129B18 /* Views */,
 				37393714250A221100129B18 /* AppDelegate.swift */,
 				37393716250A221100129B18 /* SceneDelegate.swift */,
 				37393718250A221100129B18 /* ContentView.swift */,
@@ -86,6 +107,8 @@
 				3739371F250A221400129B18 /* LaunchScreen.storyboard */,
 				37393722250A221400129B18 /* Info.plist */,
 				3739371C250A221400129B18 /* Preview Content */,
+				37393736250A245600129B18 /* Network.swift */,
+				3739374B250BB48F00129B18 /* Private Data */,
 			);
 			path = CaloriesPerKilometer;
 			sourceTree = "<group>";
@@ -105,6 +128,42 @@
 				3739372D250A221400129B18 /* Info.plist */,
 			);
 			path = CaloriesPerKilometerTests;
+			sourceTree = "<group>";
+		};
+		3739373A250A277600129B18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3739373B250A278B00129B18 /* Activity.swift */,
+				37393744250AA31800129B18 /* AuthResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37393741250A72B000129B18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3739373D250A54B700129B18 /* Stats.swift */,
+				3739373F250A72A800129B18 /* StravaAuth.swift */,
+				37393742250A72F800129B18 /* StravaAuthVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		37393746250B72F200129B18 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				37393747250B730000129B18 /* Store.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3739374B250BB48F00129B18 /* Private Data */ = {
+			isa = PBXGroup;
+			children = (
+				37393749250BAE4700129B18 /* credentials.json */,
+				37393738250A271000129B18 /* strava_activites.json */,
+			);
+			path = "Private Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37393721250A221400129B18 /* LaunchScreen.storyboard in Resources */,
+				37393739250A271000129B18 /* strava_activites.json in Resources */,
 				3739371E250A221400129B18 /* Preview Assets.xcassets in Resources */,
+				3739374A250BAE4700129B18 /* credentials.json in Resources */,
 				3739371B250A221400129B18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37393740250A72A800129B18 /* StravaAuth.swift in Sources */,
+				37393743250A72F800129B18 /* StravaAuthVC.swift in Sources */,
+				3739373C250A278B00129B18 /* Activity.swift in Sources */,
+				3739373E250A54B700129B18 /* Stats.swift in Sources */,
+				37393745250AA31800129B18 /* AuthResponse.swift in Sources */,
+				37393748250B730000129B18 /* Store.swift in Sources */,
 				37393715250A221100129B18 /* AppDelegate.swift in Sources */,
 				37393717250A221100129B18 /* SceneDelegate.swift in Sources */,
+				37393737250A245600129B18 /* Network.swift in Sources */,
 				37393719250A221100129B18 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
