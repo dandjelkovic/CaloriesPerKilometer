@@ -13,17 +13,22 @@ struct Stats: View {
 
     var body: some View {
         VStack {
-            Text("\(activites.count) Activities")
             Spacer()
-            Text("\(activites.calculate(resultType: .caloriesPerKilometer))")
-                .bold()
-                .font(Font.system(size: 40.0))
-            Text("Calories/ Kilometer")
-            Divider()
-            Text("\(activites.calculate(resultType: .caloriesPerGainedElevatedMeter))")
-                .bold()
-                .font(Font.system(size: 40.0))
-            Text("Calories/ Gained Elevated Meter")
+            VStack {
+                Text("\(activites.calculate(resultType: .caloriesPerKilometer))")
+                    .bold()
+                    .font(Font.system(size: 40.0))
+                Text("Calories/ Kilometer")
+                    .font(.system(size: 14))
+                Spacer().frame(height: 20)
+                Text("\(activites.calculate(resultType: .caloriesPerGainedElevatedMeter))")
+                    .bold()
+                    .font(Font.system(size: 40.0))
+                Text("Calories/ Gained Elevated Meter")
+                    .font(.system(size: 14))
+                Spacer().frame(height: 20)
+            }
+            Text("Average of \(activites.count) Activities")
             Spacer()
         }
     }
