@@ -18,12 +18,15 @@
 		37393737250A245600129B18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393736250A245600129B18 /* Network.swift */; };
 		37393739250A271000129B18 /* strava_activites.json in Resources */ = {isa = PBXBuildFile; fileRef = 37393738250A271000129B18 /* strava_activites.json */; };
 		3739373C250A278B00129B18 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373B250A278B00129B18 /* Activity.swift */; };
-		3739373E250A54B700129B18 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373D250A54B700129B18 /* Stats.swift */; };
+		3739373E250A54B700129B18 /* StatsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373D250A54B700129B18 /* StatsOverview.swift */; };
 		37393740250A72A800129B18 /* StravaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739373F250A72A800129B18 /* StravaAuth.swift */; };
 		37393743250A72F800129B18 /* StravaAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393742250A72F800129B18 /* StravaAuthVC.swift */; };
 		37393745250AA31800129B18 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393744250AA31800129B18 /* AuthResponse.swift */; };
 		37393748250B730000129B18 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393747250B730000129B18 /* Store.swift */; };
 		3739374A250BAE4700129B18 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 37393749250BAE4700129B18 /* credentials.json */; };
+		3739374C2510C2A500129B18 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B0AC97A2510AB4800800185 /* activities.json */; };
+		3739374E2510CCD500129B18 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739374D2510CCD500129B18 /* Stats.swift */; };
+		373937502510CDDE00129B18 /* StatsByYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739374F2510CDDE00129B18 /* StatsByYear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2B0AC97A2510AB4800800185 /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = activities.json; sourceTree = "<group>"; };
-		37393711250A221100129B18 /* CaloriesPerKilometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloriesPerKilometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37393711250A221100129B18 /* Calories Per.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calories Per.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37393714250A221100129B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37393716250A221100129B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		37393718250A221100129B18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,12 +55,14 @@
 		37393736250A245600129B18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		37393738250A271000129B18 /* strava_activites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strava_activites.json; sourceTree = "<group>"; };
 		3739373B250A278B00129B18 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		3739373D250A54B700129B18 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		3739373D250A54B700129B18 /* StatsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsOverview.swift; sourceTree = "<group>"; };
 		3739373F250A72A800129B18 /* StravaAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuth.swift; sourceTree = "<group>"; };
 		37393742250A72F800129B18 /* StravaAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuthVC.swift; sourceTree = "<group>"; };
 		37393744250AA31800129B18 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		37393747250B730000129B18 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		37393749250BAE4700129B18 /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		3739374D2510CCD500129B18 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = ../../../../Documents/Stats.swift; sourceTree = "<group>"; };
+		3739374F2510CDDE00129B18 /* StatsByYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsByYear.swift; path = ../../../../Documents/StatsByYear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +103,7 @@
 		37393712250A221100129B18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37393711250A221100129B18 /* CaloriesPerKilometer.app */,
+				37393711250A221100129B18 /* Calories Per.app */,
 				37393727250A221400129B18 /* CaloriesPerKilometerTests.xctest */,
 			);
 			name = Products;
@@ -153,7 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				37393718250A221100129B18 /* ContentView.swift */,
-				3739373D250A54B700129B18 /* Stats.swift */,
+				3739374D2510CCD500129B18 /* Stats.swift */,
+				3739374F2510CDDE00129B18 /* StatsByYear.swift */,
+				3739373D250A54B700129B18 /* StatsOverview.swift */,
 				3739373F250A72A800129B18 /* StravaAuth.swift */,
 				37393742250A72F800129B18 /* StravaAuthVC.swift */,
 			);
@@ -194,7 +201,7 @@
 			);
 			name = CaloriesPerKilometer;
 			productName = CaloriesPerKilometer;
-			productReference = 37393711250A221100129B18 /* CaloriesPerKilometer.app */;
+			productReference = 37393711250A221100129B18 /* Calories Per.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37393726250A221400129B18 /* CaloriesPerKilometerTests */ = {
@@ -271,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3739374C2510C2A500129B18 /* activities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +292,13 @@
 				37393740250A72A800129B18 /* StravaAuth.swift in Sources */,
 				37393743250A72F800129B18 /* StravaAuthVC.swift in Sources */,
 				3739373C250A278B00129B18 /* Activity.swift in Sources */,
-				3739373E250A54B700129B18 /* Stats.swift in Sources */,
+				3739373E250A54B700129B18 /* StatsOverview.swift in Sources */,
 				37393745250AA31800129B18 /* AuthResponse.swift in Sources */,
 				37393748250B730000129B18 /* Store.swift in Sources */,
 				37393715250A221100129B18 /* AppDelegate.swift in Sources */,
+				373937502510CDDE00129B18 /* StatsByYear.swift in Sources */,
 				37393717250A221100129B18 /* SceneDelegate.swift in Sources */,
+				3739374E2510CCD500129B18 /* Stats.swift in Sources */,
 				37393737250A245600129B18 /* Network.swift in Sources */,
 				37393719250A221100129B18 /* ContentView.swift in Sources */,
 			);
@@ -452,8 +462,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.CaloriesPerKilometer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dev.dandjelkovic.CaloriesPerKilometer;
+				PRODUCT_NAME = "Calories Per";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -474,8 +484,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.CaloriesPerKilometer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.dev.dandjelkovic.CaloriesPerKilometer;
+				PRODUCT_NAME = "Calories Per";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaloriesPerKilometer.app/CaloriesPerKilometer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calories Per.app/Calories Per";
 			};
 			name = Debug;
 		};
@@ -522,7 +532,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaloriesPerKilometer.app/CaloriesPerKilometer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calories Per.app/Calories Per";
 			};
 			name = Release;
 		};

@@ -7,53 +7,44 @@
 //
 
 import XCTest
-@testable import CaloriesPerKilometer
+@testable import Calories_Per
 
 class CaloriesPerKilometerTests: XCTestCase {
-    let activitesJSON =
-    """
-    [
-        {
-            "id": 1,
-            "distance": 5000,
-            "kilojoules": 250,
-            "total_elevation_gain": 50,
-        },
-        {
-            "id": 2,
-            "distance": 10000,
-            "kilojoules": 500,
-            "total_elevation_gain": 100,
-        },
-        {
-            "id": 3,
-            "distance": 20000,
-            "kilojoules": 1000,
-            "total_elevation_gain": 200,
-        },
-    ]
-    """
+    let activitesJSON = {
+        try! Data(contentsOf: Bundle.main.url(forResource: "activities", withExtension: "json")!)
+    }
 
     func testCalucaltionOfCaloiresPerKilometer() {
-        let data = activitesJSON.data(using: .utf8)!
-        let activities = try! JSONDecoder().decode([Activity].self, from: data)
+        // given
+        let activities = try! JSONDecoder().decode([Activity].self, from: activitesJSON())
 
         // when
         let result = activities.calculate(resultType: .caloriesPerKilometer)
 
         // then
-        XCTAssertEqual(result, "11.950")
+        XCTAssertEqual(result, "6.675")
     }
 
     func testCalucaltionOfCaloiresPerElevatedMeters() {
-        let data = activitesJSON.data(using: .utf8)!
-        let activities = try! JSONDecoder().decode([Activity].self, from: data)
+        // given
+        let activities = try! JSONDecoder().decode([Activity].self, from: activitesJSON())
 
         // when
         let result = activities.calculate(resultType: .caloriesPerGainedElevatedMeter)
 
         // then
-        XCTAssertEqual(result, "1.195")
+        XCTAssertEqual(result, "1.350")
+    }
+
+    func testGroupByYear() {
+        // given
+        let activities = try! JSONDecoder().decode([Activity].self, from: activitesJSON())
+
+        // when
+        let groupedActivities = activities.groupByYear()
+
+        // then
+        XCTAssertEqual(groupedActivities.count, 4)
     }
 
 }

@@ -1,70 +1,82 @@
-{
-  "total_elevation_gain": 115.4,
-  "distance": 19385.9,
-  "kilojoules": 669.8,
-  "start_date": "2017-09-09T16:03:33Z",
-  "id": 1234567891
-},
-{
-  "total_elevation_gain": 109.2,
-  "distance": 19208.3,
-  "kilojoules": 489,
-  "start_date": "2017-08-27T14:55:35Z",
-  "id": 1234567892
-},
-{
-  "total_elevation_gain": 90,
-  "distance": 13617.7,
-  "kilojoules": 372.3,
-  "start_date": "2018-08-23T13:23:29Z",
-  "id": 1234567893
-},
-{
-  "total_elevation_gain": 131.6,
-  "distance": 21749.9,
-  "kilojoules": 720.4,
-  "start_date": "2018-08-02T08:25:42Z",
-  "id": 1234567894
-},
-{
-  "total_elevation_gain": 114,
-  "distance": 38142.4,
-  "kilojoules": 964.2,
-  "start_date": "2018-07-26T14:58:41Z",
-  "id": 1234567895
-},
-{
-  "total_elevation_gain": 133.4,
-  "distance": 24911.6,
-  "kilojoules": 673,
-  "start_date": "2019-07-01T14:11:59Z",
-  "id": 1234567896
-},
-{
-  "total_elevation_gain": 28.9,
-  "distance": 9573.1,
-  "kilojoules": 211.2,
-  "start_date": "2019-06-29T15:26:17Z",
-  "id": 1234567897
-},
-{
-  "total_elevation_gain": 90.9,
-  "distance": 18424.8,
-  "kilojoules": 581.4,
-  "start_date": "2020-06-26T17:40:58Z",
-  "id": 1234567898
-},
-{
-  "total_elevation_gain": 81.1,
-  "distance": 10704.1,
-  "kilojoules": 255.7,
-  "start_date": "2020-06-17T16:00:23Z",
-  "id": 1234567899
-},
-{
-  "total_elevation_gain": 34.2,
-  "distance": 12068.9,
-  "kilojoules": 307.8,
-  "start_date": "2020-06-13T18:20:35Z",
-  "id": 1234567890
-},
+[
+    {
+        "total_elevation_gain": 115.4,
+        "distance": 19385.9,
+        "kilojoules": 669.8,
+        "start_date": "2017-09-09T16:03:33Z",
+        "start_date_local": "2017-09-09T09:03:33Z",
+        "id": 1234567891
+    },
+    {
+        "total_elevation_gain": 109.2,
+        "distance": 19208.3,
+        "kilojoules": 489,
+        "start_date": "2017-08-27T14:55:35Z",
+        "start_date_local": "2017-08-27T07:55:35Z",
+        "id": 1234567892
+    },
+    {
+        "total_elevation_gain": 90,
+        "distance": 13617.7,
+        "kilojoules": 372.3,
+        "start_date": "2018-08-23T13:23:29Z",
+        "start_date_local": "2018-08-23T06:23:29Z",
+        "id": 1234567893
+    },
+    {
+        "total_elevation_gain": 131.6,
+        "distance": 21749.9,
+        "kilojoules": 720.4,
+        "start_date": "2018-08-02T08:25:42Z",
+        "start_date_local": "2018-08-02T01:25:42Z",
+        "id": 1234567894
+    },
+    {
+        "total_elevation_gain": 114,
+        "distance": 38142.4,
+        "kilojoules": 964.2,
+        "start_date": "2018-07-26T14:58:41Z",
+        "start_date_local": "2018-07-26T07:58:41Z",
+        "id": 1234567895
+    },
+    {
+        "total_elevation_gain": 133.4,
+        "distance": 24911.6,
+        "kilojoules": 673,
+        "start_date": "2019-07-01T14:11:59Z",
+        "start_date_local": "2019-07-01T07:11:59Z",
+        "id": 1234567896
+    },
+    {
+        "total_elevation_gain": 28.9,
+        "distance": 9573.1,
+        "kilojoules": 211.2,
+        "start_date": "2019-06-29T15:26:17Z",
+        "start_date_local": "2019-06-29T08:26:17Z",
+        "id": 1234567897
+    },
+    {
+        "total_elevation_gain": 90.9,
+        "distance": 18424.8,
+        "kilojoules": 581.4,
+        "start_date": "2020-06-26T17:40:58Z",
+        "start_date_local": "2020-06-26T10:40:58Z",
+        "id": 1234567898
+    },
+    {
+        "total_elevation_gain": 81.1,
+        "distance": 10704.1,
+        "kilojoules": 255.7,
+        "start_date": "2020-06-17T16:00:23Z",
+        "start_date_local": "2020-06-17T09:00:23Z",
+        "id": 1234567899
+    },
+    {
+        "total_elevation_gain": 34.2,
+        "distance": 12068.9,
+        "kilojoules": 307.8,
+        "start_date": "2020-06-13T18:20:35Z",
+        "start_date_local": "2020-06-13T11:20:35Z",
+        "id": 1234567890
+    },
+]

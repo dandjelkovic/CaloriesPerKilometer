@@ -13,12 +13,14 @@ struct Activity: Decodable, Hashable {
     var kilojoules: Float
     var distance: Float
     var totalElevationGain: Float
+    var startDateLocal: Date
 
     private enum CodingKeys: String, CodingKey {
         case id
         case kilojoules
         case distance
         case totalElevationGain = "total_elevation_gain"
+        case startDateLocal = "start_date_local"
     }
 
     public init(from decoder: Decoder) throws {
@@ -28,6 +30,9 @@ struct Activity: Decodable, Hashable {
         kilojoules = try container.decodeIfPresent(Float.self, forKey: .kilojoules) ?? 0.0
         distance = try container.decode(Float.self, forKey: .distance)
         totalElevationGain = try container.decodeIfPresent(Float.self, forKey: .totalElevationGain) ?? 0.0
+        let startDateString = try container.decode(String.self, forKey: .startDateLocal)
+        startDateLocal = ISO8601DateFormatter().date(from: startDateString) ?? Date(timeIntervalSinceReferenceDate: 0)
+
     }
 
     static func mocked() -> [Activity] {
@@ -77,6 +82,14 @@ extension Array where Element == Activity {
             let average = sumCalories / sumElevatedMeters
 
             return String(format: "%.3f", average)
+        }
+    }
+
+    func groupByYear() -> [String: [Activity]] {
+        return Dictionary(grouping: self) {
+            let date = $0.startDateLocal
+            let dateComponents = Calendar.current.dateComponents([.year], from: date)
+            return "\(dateComponents.year ?? 1970)"
         }
     }
 }

@@ -17,13 +17,13 @@ struct ContentView: View {
             .repeatForever(autoreverses: false)
             .speed(0.8)
     }
-
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                if !store.actvities.isEmpty {
-                    Stats(activites: $store.actvities)
-                } else {
+        VStack {
+            if !store.actvities.isEmpty {
+                StatsByYear(activites: $store.actvities)
+            } else {
+                NavigationView {
                     if store.authSucceededButNotFinished {
                         Group {
                             Image(systemName: "arrow.2.circlepath")
@@ -32,21 +32,20 @@ struct ContentView: View {
                                 .onAppear{ self.isAnimating = true }
                                 .onDisappear{ self.isAnimating = false }
                             Text("Receiving Activities")
-                            .bold()
+                                .bold()
                         }
                         .font(.system(size: 40))
                         .foregroundColor(Color(red: 252 / 256, green: 82 / 256, blue: 0))
-                        } else {
-                            NavigationLink(destination: StravaAuth()) {
-                                VStack {
-                                    Group {
-                                        Image(systemName: "lock.shield")
-                                        Text("Connect Strava")
-                                            .bold()
-                                    }
-                                    .foregroundColor(Color(red: 252 / 256, green: 82 / 256, blue: 0))
-                                    .font(.system(size: 40))
+                    } else {
+                        NavigationLink(destination: StravaAuth()) {
+                            VStack {
+                                Group {
+                                    Image(systemName: "lock.shield")
+                                    Text("Connect Strava")
+                                        .bold()
                                 }
+                                .foregroundColor(Color(red: 252 / 256, green: 82 / 256, blue: 0))
+                                .font(.system(size: 40))
                             }
                         }
                     }
@@ -54,10 +53,11 @@ struct ContentView: View {
             }
         }
     }
+}
 
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            store.authSucceededButNotFinished = true
-            return ContentView(store: store)
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        store.authSucceededButNotFinished = true
+        return ContentView(store: store)
+    }
 }
