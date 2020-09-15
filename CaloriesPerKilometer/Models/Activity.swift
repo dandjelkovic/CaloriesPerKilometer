@@ -31,7 +31,12 @@ struct Activity: Decodable, Hashable {
     }
 
     static func mocked() -> [Activity] {
-        let fileURL = Bundle.main.url(forResource: "strava_activites", withExtension: "json")!
+        let bundle = Bundle.main
+        var fileURL: URL = bundle.url(forResource: "activities", withExtension: "json")!
+        if let privateActivitiesURL = bundle.url(forResource: "strava_activites", withExtension: "json") {
+            print("Use private activites JSON")
+            fileURL = privateActivitiesURL
+        }
         let data = try! Data(contentsOf: fileURL)
 
         let result = try! JSONDecoder().decode([Activity].self, from: data)

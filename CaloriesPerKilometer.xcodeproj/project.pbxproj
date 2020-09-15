@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0AC97B2510AB4800800185 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B0AC97A2510AB4800800185 /* activities.json */; };
 		37393715250A221100129B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393714250A221100129B18 /* AppDelegate.swift */; };
 		37393717250A221100129B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393716250A221100129B18 /* SceneDelegate.swift */; };
 		37393719250A221100129B18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393718250A221100129B18 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0AC97A2510AB4800800185 /* activities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = activities.json; sourceTree = "<group>"; };
 		37393711250A221100129B18 /* CaloriesPerKilometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloriesPerKilometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37393714250A221100129B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37393716250A221100129B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0AC9792510AAFE00800185 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				2B0AC97A2510AB4800800185 /* activities.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		37393708250A221100129B18 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				37393746250B72F200129B18 /* Common */,
+				2B0AC9792510AAFE00800185 /* Mock */,
 				3739373A250A277600129B18 /* Models */,
 				37393741250A72B000129B18 /* Views */,
 				37393714250A221100129B18 /* AppDelegate.swift */,
 				37393716250A221100129B18 /* SceneDelegate.swift */,
-				37393718250A221100129B18 /* ContentView.swift */,
 				3739371A250A221400129B18 /* Assets.xcassets */,
 				3739371F250A221400129B18 /* LaunchScreen.storyboard */,
 				37393722250A221400129B18 /* Info.plist */,
@@ -142,6 +152,7 @@
 		37393741250A72B000129B18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37393718250A221100129B18 /* ContentView.swift */,
 				3739373D250A54B700129B18 /* Stats.swift */,
 				3739373F250A72A800129B18 /* StravaAuth.swift */,
 				37393742250A72F800129B18 /* StravaAuthVC.swift */,
@@ -160,8 +171,8 @@
 		3739374B250BB48F00129B18 /* Private Data */ = {
 			isa = PBXGroup;
 			children = (
-				37393749250BAE4700129B18 /* credentials.json */,
 				37393738250A271000129B18 /* strava_activites.json */,
+				37393749250BAE4700129B18 /* credentials.json */,
 			);
 			path = "Private Data";
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 			files = (
 				37393721250A221400129B18 /* LaunchScreen.storyboard in Resources */,
 				37393739250A271000129B18 /* strava_activites.json in Resources */,
+				2B0AC97B2510AB4800800185 /* activities.json in Resources */,
 				3739371E250A221400129B18 /* Preview Assets.xcassets in Resources */,
 				3739374A250BAE4700129B18 /* credentials.json in Resources */,
 				3739371B250A221400129B18 /* Assets.xcassets in Resources */,
@@ -430,9 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesPerKilometer/Preview Content\"";
-				DEVELOPMENT_TEAM = FCNMCC2Y82;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CaloriesPerKilometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.CaloriesPerKilometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,9 +464,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesPerKilometer/Preview Content\"";
-				DEVELOPMENT_TEAM = FCNMCC2Y82;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CaloriesPerKilometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.CaloriesPerKilometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,7 +488,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FCNMCC2Y82;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				INFOPLIST_FILE = CaloriesPerKilometerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -494,7 +510,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FCNMCC2Y82;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				INFOPLIST_FILE = CaloriesPerKilometerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
