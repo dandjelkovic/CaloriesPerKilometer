@@ -25,8 +25,8 @@
 		37393748250B730000129B18 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37393747250B730000129B18 /* Store.swift */; };
 		3739374A250BAE4700129B18 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 37393749250BAE4700129B18 /* credentials.json */; };
 		3739374C2510C2A500129B18 /* activities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B0AC97A2510AB4800800185 /* activities.json */; };
-		3739374E2510CCD500129B18 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739374D2510CCD500129B18 /* Stats.swift */; };
-		373937502510CDDE00129B18 /* StatsByYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739374F2510CDDE00129B18 /* StatsByYear.swift */; };
+		379AF599251493AA00FDA197 /* StatsByYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379AF597251493AA00FDA197 /* StatsByYear.swift */; };
+		379AF59A251493AA00FDA197 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379AF598251493AA00FDA197 /* Stats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		37393744250AA31800129B18 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		37393747250B730000129B18 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		37393749250BAE4700129B18 /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
-		3739374D2510CCD500129B18 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = ../../../../Documents/Stats.swift; sourceTree = "<group>"; };
-		3739374F2510CDDE00129B18 /* StatsByYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsByYear.swift; path = ../../../../Documents/StatsByYear.swift; sourceTree = "<group>"; };
+		379AF597251493AA00FDA197 /* StatsByYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsByYear.swift; sourceTree = "<group>"; };
+		379AF598251493AA00FDA197 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +157,9 @@
 		37393741250A72B000129B18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				379AF598251493AA00FDA197 /* Stats.swift */,
+				379AF597251493AA00FDA197 /* StatsByYear.swift */,
 				37393718250A221100129B18 /* ContentView.swift */,
-				3739374D2510CCD500129B18 /* Stats.swift */,
-				3739374F2510CDDE00129B18 /* StatsByYear.swift */,
 				3739373D250A54B700129B18 /* StatsOverview.swift */,
 				3739373F250A72A800129B18 /* StravaAuth.swift */,
 				37393742250A72F800129B18 /* StravaAuthVC.swift */,
@@ -290,15 +290,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				37393740250A72A800129B18 /* StravaAuth.swift in Sources */,
+				379AF59A251493AA00FDA197 /* Stats.swift in Sources */,
 				37393743250A72F800129B18 /* StravaAuthVC.swift in Sources */,
 				3739373C250A278B00129B18 /* Activity.swift in Sources */,
+				379AF599251493AA00FDA197 /* StatsByYear.swift in Sources */,
 				3739373E250A54B700129B18 /* StatsOverview.swift in Sources */,
 				37393745250AA31800129B18 /* AuthResponse.swift in Sources */,
 				37393748250B730000129B18 /* Store.swift in Sources */,
 				37393715250A221100129B18 /* AppDelegate.swift in Sources */,
-				373937502510CDDE00129B18 /* StatsByYear.swift in Sources */,
 				37393717250A221100129B18 /* SceneDelegate.swift in Sources */,
-				3739374E2510CCD500129B18 /* Stats.swift in Sources */,
 				37393737250A245600129B18 /* Network.swift in Sources */,
 				37393719250A221100129B18 /* ContentView.swift in Sources */,
 			);
