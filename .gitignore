@@ -25,5 +25,6 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
-credentials.json
-strava_activites.json
+## Personal Data
+CaloriesPerKilometer/PersonalData/credentials.json
+CaloriesPerKilometer/PersonalData/strava_activites.json

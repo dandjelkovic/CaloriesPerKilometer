@@ -123,7 +123,7 @@
 				37393722250A221400129B18 /* Info.plist */,
 				3739371C250A221400129B18 /* Preview Content */,
 				37393736250A245600129B18 /* Network.swift */,
-				3739374B250BB48F00129B18 /* Private Data */,
+				3739374B250BB48F00129B18 /* PersonalData */,
 			);
 			path = CaloriesPerKilometer;
 			sourceTree = "<group>";
@@ -175,13 +175,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3739374B250BB48F00129B18 /* Private Data */ = {
+		3739374B250BB48F00129B18 /* PersonalData */ = {
 			isa = PBXGroup;
 			children = (
 				37393738250A271000129B18 /* strava_activites.json */,
 				37393749250BAE4700129B18 /* credentials.json */,
 			);
-			path = "Private Data";
+			path = PersonalData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
