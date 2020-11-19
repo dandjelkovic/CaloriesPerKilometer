@@ -12,8 +12,8 @@
 2. Create a file called ´credentials.json´ with following contents:
 ```
 {
-"client_id" : "YOUT CLIENT_ID",
-"client_secret" : "YOUT CLIENT SECRET"
+"client_id" : "YOUR CLIENT_ID",
+"client_secret" : "YOUR CLIENT SECRET"
 }
 ``` 
 3. Add the file ´credentials.json´ to your target.
