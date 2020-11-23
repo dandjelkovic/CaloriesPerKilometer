@@ -11,10 +11,16 @@ import UIKit
 import AuthenticationServices
 
 enum Network {
+    private static var credentialsURL: URL = {
+        guard let url = Bundle.main.url(forResource: "credentials", withExtension: "json") else {
+            fatalError("Strava credentials must be set in the `credentials.json` file")
+        }
+        return url
+    }()
+
     private static var clientID: String {
-        let fileURL = Bundle.main.url(forResource: "credentials", withExtension: "json")!
         do {
-            let data = try Data(contentsOf: fileURL)
+            let data = try Data(contentsOf: credentialsURL)
             guard
                 let credentials = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String],
                 let clientId = credentials["client_id"]
@@ -27,9 +33,8 @@ enum Network {
         }
     }
     private static var clientSecret: String {
-        let fileURL = Bundle.main.url(forResource: "credentials", withExtension: "json")!
         do {
-            let data = try Data(contentsOf: fileURL)
+            let data = try Data(contentsOf: credentialsURL)
             guard
                 let credentials = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String],
                 let clientSecret = credentials["client_secret"]

@@ -8,7 +8,7 @@
 
 ## How to use
 
-1. Create yout persnal App and obtain your credentials from https://www.strava.com/settings/api 
+1. Create your personal App and obtain your credentials from https://www.strava.com/settings/api 
 2. Create a file called ´credentials.json´ with following contents:
 ```
 {
