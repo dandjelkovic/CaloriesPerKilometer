@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct Stats: View {
-    var activites:  [Activity]
+    var activites: [Activity]
     var body: some View {
         HStack {
             Spacer()
@@ -18,13 +18,13 @@ struct Stats: View {
                 Text("\(activites.calculate(resultType: .caloriesPerKilometer))")
                     .bold()
                     .font(Font.system(size: 40.0))
-                Text("Calories/ Kilometer")
+                Text("Calories / Kilometer")
                     .font(.system(size: 14))
                 Spacer().frame(height: 20)
                 Text("\(activites.calculate(resultType: .caloriesPerGainedElevatedMeter))")
                     .bold()
                     .font(Font.system(size: 40.0))
-                Text("Calories/ Gained Elevated Meter")
+                Text("Calories / Gained Elevated Meter")
                     .font(.system(size: 14))
                 Spacer().frame(height: 20)
             }

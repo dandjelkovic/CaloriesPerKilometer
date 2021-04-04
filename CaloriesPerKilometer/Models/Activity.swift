@@ -92,4 +92,12 @@ extension Array where Element == Activity {
             return "\(dateComponents.year ?? 1970)"
         }
     }
+
+    func sumKilometers() -> String {
+        guard !self.isEmpty else { return "..." }
+        let sumKilometers = self.reduce(0) {
+            $0 + $1.distance
+        } / 1000 
+        return String(format: "%.1f", sumKilometers)
+    }
 }

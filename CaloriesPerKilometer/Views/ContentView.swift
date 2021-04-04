@@ -26,13 +26,15 @@ struct ContentView: View {
                 NavigationView {
                     if store.authSucceededButNotFinished {
                         Group {
-                            Image(systemName: "arrow.2.circlepath")
-                                .rotationEffect(.degrees(self.isAnimating ? 180.0 : 0.0))
-                                .animation(foreverAnimation)
-                                .onAppear{ self.isAnimating = true }
-                                .onDisappear{ self.isAnimating = false }
-                            Text("Receiving Activities")
-                                .bold()
+                            VStack {
+                                Image(systemName: "arrow.2.circlepath")
+                                    .rotationEffect(.degrees(self.isAnimating ? 180.0 : 0.0))
+                                    .animation(foreverAnimation)
+                                    .onAppear{ self.isAnimating = true }
+                                    .onDisappear{ self.isAnimating = false }
+                                Text("Receiving Activities")
+                                    .bold()
+                            }
                         }
                         .font(.system(size: 40))
                         .foregroundColor(Color(red: 252 / 256, green: 82 / 256, blue: 0))

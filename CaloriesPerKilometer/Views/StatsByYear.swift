@@ -22,7 +22,7 @@ struct StatsByYear: View {
                 Section(header:
                     Text("\(year)").font(.title).bold()
                     +
-                    Text(" \(self.yearlyActivites[year]!.count) activities")) {
+                    Text(" \(self.yearlyActivites[year]!.count) activities, \(self.yearlyActivites[year]!.sumKilometers()) km")) {
                     Stats(activites: self.yearlyActivites[year]!)
                 }
             }
